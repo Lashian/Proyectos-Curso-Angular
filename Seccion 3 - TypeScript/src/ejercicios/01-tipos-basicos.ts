@@ -1,7 +1,3 @@
-/*
-    ===== Código de TypeScript =====
-*/
-
 let nombre: string = "Lashian";
 let hp: number | string = 100;
 let isAlive: boolean = true;
