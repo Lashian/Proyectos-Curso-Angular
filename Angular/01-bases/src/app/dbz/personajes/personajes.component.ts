@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Personaje } from '../interfaces/dbz.interface';
+import { DbzService } from '../services/dbz.services';
 //import{MainPageComponent} from '../main-page/main-page.component';
 
 
@@ -7,19 +8,27 @@ import { Personaje } from '../interfaces/dbz.interface';
   selector: 'app-personajes',
   templateUrl: './personajes.component.html',
 })
-export class PersonajesComponent implements OnInit {
+export class PersonajesComponent{
 
-  @Input() personajes:Personaje[] = [];
+  //@Input() personajes:Personaje[] = [];
+  get personajes(){
+    return this.dbzService.personajes;
+  }
   
+  constructor(private dbzService:DbzService){
+
+  }
+
+
 
   //ciclos de vida
   //Lo que hace es que ya que comparten el mismo objeto padre e hijo, al hacer push al hijo tmb se hace push al padre
-  ngOnInit(): void {
+  /*ngOnInit(): void {
     
     this.personajes.push( {
       nombre: "Frizzer",
       poder: 9001,
     },)
-  }
+  }*/
 
 }

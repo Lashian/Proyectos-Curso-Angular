@@ -4,13 +4,15 @@ import { FormsModule } from '@angular/forms';
 
 import { MainPageComponent } from './main-page/main-page.component';
 import { PersonajesComponent } from './personajes/personajes.component';
+import { AgregarPersonajeComponent } from './agregar-personaje/agregar-personaje.component';
 
-
+import{DbzService} from './services/dbz.services';
 
 @NgModule({
   declarations: [
     MainPageComponent,
-    PersonajesComponent
+    PersonajesComponent,
+    AgregarPersonajeComponent
   ],
   imports: [
     CommonModule,
@@ -19,5 +21,8 @@ import { PersonajesComponent } from './personajes/personajes.component';
   exports:[
     MainPageComponent,
   ],
+  providers:[
+    DbzService,
+  ]
 })
 export class DbzModule { }
