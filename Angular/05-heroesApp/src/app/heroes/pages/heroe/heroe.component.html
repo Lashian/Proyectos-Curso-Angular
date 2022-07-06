@@ -1,0 +1,24 @@
+
+
+<mat-grid-list cols="1" *ngIf="!heroe; else divHeroe">
+    <mat-grid-tile>
+        <mat-spinner></mat-spinner>
+    </mat-grid-tile>
+</mat-grid-list>
+
+<ng-template #divHeroe>{{heroe | json}}
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="30px">
+        <div fxFlex="50">
+            <h1>{{heroe.name}}</h1> <small>- {{heroe.server}}</small>
+            <br>
+            <img [src]="heroe |imagen" alt="">
+        </div>
+        <br>
+        <div>
+            <h1>{{heroe.job}}</h1>
+            <h3>{{heroe.discordTag}}</h3>
+            <small>{{heroe.info}}</small>
+        </div>
+    </div>
+
+</ng-template>

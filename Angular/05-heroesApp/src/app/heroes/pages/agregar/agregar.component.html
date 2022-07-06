@@ -1,0 +1,61 @@
+
+<h1>Add new member</h1>
+
+<div fxLayout="row" fxLayout.xs="column" fxLayoutGap="40px">
+    <div fxFlex="50" fxLayout="column">
+
+        
+
+        <mat-form-field fxFlex="100">
+            <mat-label>Character Name</mat-label>
+            <input matInput type="text" [(ngModel)]="heroe.name" required>
+        </mat-form-field>
+
+        <mat-form-field fxFlex="100">
+            <mat-label>Server</mat-label>
+            <input matInput type="text" [(ngModel)]="heroe.server" required>
+        </mat-form-field>
+
+        <mat-form-field fxFlex="100">
+            <mat-label>Job</mat-label>
+            <input matInput type="text" [(ngModel)]="heroe.job" required>
+        </mat-form-field>
+
+        <mat-form-field fxFlex="100">
+            <mat-label>Discord Tag</mat-label>
+            <input matInput type="text" [(ngModel)]="heroe.discordTag" required>
+        </mat-form-field>
+
+        <mat-form-field fxFlex="100">
+            <mat-label>Info</mat-label>
+            <input matInput type="text" [(ngModel)]="heroe.info" required>
+        </mat-form-field>
+
+        <mat-form-field fxFlex="100">
+            <mat-label>Url picture</mat-label>
+            <input matInput type="url" [(ngModel)]="heroe.alt_img" required>
+        </mat-form-field>
+
+        <br>
+
+        <button mat-raised-button (click)="guardar()" color="primary">
+            <mat-icon>save</mat-icon>
+            Save
+        </button>
+
+        <span class="spacer"></span>
+
+        <div fxLayout>
+            <button *ngIf="heroe.id"
+            mat-raised-button (click)="borrarHeroe()" color="warn">
+                <mat-icon>remove</mat-icon>
+                Delete
+            </button>
+        </div>
+
+        <div>
+            <img [src]="heroe | imagen">
+        </div>
+
+    </div>
+</div>

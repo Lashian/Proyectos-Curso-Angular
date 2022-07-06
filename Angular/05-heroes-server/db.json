@@ -1,0 +1,43 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "usuario": "Lashian",
+      "email": "john.due@gmail.com"
+    }
+  ],
+  "heroes": [
+    {
+      "id": "HimariTiki",
+      "name": "H'imari Tiki",
+      "server": "Ragnarok",
+      "job": "PlaceHolder",
+      "discordTag": "",
+      "info": ""
+    },
+    {
+      "id": "LashianFhlaria",
+      "name": "Lashian Fhlaria",
+      "server": "Ragnarok",
+      "job": "PlaceHolder",
+      "discordTag": "",
+      "info": ""
+    },
+    {
+      "id": "Ophelia",
+      "name": "Ophelia aka Mom",
+      "server": "Ragnarok",
+      "job": "PlaceHolder",
+      "discordTag": "",
+      "info": ""
+    },
+    {
+      "id": "SpiritCode",
+      "name": "Spirit Code",
+      "server": "Ragnarok",
+      "job": "PlaceHolder",
+      "discordTag": "",
+      "info": ""
+    }
+  ]
+}
